@@ -150,3 +150,15 @@
       END
       GO
     """
+
+  'Create schema':
+    'prefix': 'createschema-ms'
+    'description': 'Create a schema if it does not already exist'
+    'leftLabelHTML': 'MS-SQL'
+    'body': """
+      IF NOT EXISTS (SELECT schema_name FROM INFORMATION_SCHEMA.SCHEMATA WHERE schema_name = '$1')
+      BEGIN
+        EXEC sp_executesql N'CREATE SCHEMA $1'
+      END
+      GO
+    """

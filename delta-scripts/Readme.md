@@ -1,8 +1,4 @@
-# SQL Snippets
-
-SQL code snippets to make life easier. These are all specific to MS SQL Server
-
-## delta-scripts
+# SQL Snippets - delta-scripts
 
 This folder has scripts to simplify the creation of delta scripts for creating and updating databases.
 There are snippet files for the following editors
@@ -18,6 +14,7 @@ The following snippets are available:
 | --- | --- | --- |
 | Add Column | If a column does not exist in the table, add it | addcolumn |
 | Add Column Constraint | If a constraint does not exists on the specified column does not exist in the table, add it | addcolumnconstraint |
+| Create Schema | If the specified schema does not exist, it will be created | createschema |
 | Create Stored Procedure | Create the specified stored procedure | createstoredproc |
 | Create Table | If the specified table does not exist in the database, create it | createtable |
 | Create View | If the specified view does not exist in the table, create it. If it does exist, drop it and recreate it | createview |
@@ -29,6 +26,6 @@ The following snippets are available:
 | Insert Row | Check to see if an entry matching the specified column value exists. If not, insert the specified row | insertrow |
 | Make Column Non-Null | Make an existing column non-null. Note that you need to know the existing definition of the column | makenonnull |
 
-### delta-scripts: General notes
+## delta-scripts: General notes
 
 The scripts take advantage of the INFORMATION_SCHEMA schema common to SQL Server, MySQL and PostgreSQL, however the implementations use logic which does not necessarily work across databases.

@@ -129,8 +129,20 @@ GO
 [>END<]
 
 Author:  notahelpdesk
-Created: 2017-01-09
+Created: 2017-01-27
 Description: Create a stored procedure. If the procedure already exists, the script will be run as an alter!$[FingerTextData FingerTextData]@#
+createschema-ms
+Lang:SQL
+IF NOT EXISTS (SELECT schema_name FROM INFORMATION_SCHEMA.SCHEMATA WHERE schema_name = '$[![SchemaName]!]')
+BEGIN
+EXEC sp_executesql N'CREATE SCHEMA $[![SchemaName]!]'
+END
+GO
+[>END<]
+
+Author:  notahelpdesk
+Created: 2017-01-09
+Description: Create a schema if it does not already exist!$[FingerTextData FingerTextData]@#
 addcolumnconstraint-ms
 Lang:SQL
 IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.CONSTRAINT_COLUMN_USAGE WHERE TABLE_SCHEMA = '$[![SchemaName]!]' AND TABLE_NAME = '$[![TableName]!]' AND COLUMN_NAME = '$[![ColumnName]!]')

@@ -1,16 +1,21 @@
 # SQL Snippets
 
-SQL code snippets to make life easier. These are all specific to MS SQL Server
+SQL code snippets to make database life easier
 
-## delta-scripts
+## Editors
 
-This folder has scripts to simplify the creation of delta scripts for creating and updating databases.
 There are snippet files for the following editors
 
 * [Atom](https://atom.io/) 
 * [Notepad++](https://notepad-plus-plus.org/)
 * [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/mt238290.aspx). Note that snippets were not introduced into SSMS until the 2012 version (version 11.0)
 * [Visual Studio](https://www.visualstudio.com/)
+
+Note that for Atom, it will be necessary to edit the snippets.cson file manually and import the snippets from the appropriate .cson file within this repository.
+
+## delta-scripts
+
+This folder has scripts to simplify the creation of delta scripts for creating and updating databases.
 
 The following snippets are available:
 
@@ -32,3 +37,15 @@ The following snippets are available:
 ### delta-scripts: General notes
 
 The scripts take advantage of the INFORMATION_SCHEMA schema common to SQL Server, MySQL and PostgreSQL, however the implementations use logic which does not necessarily work across databases.
+
+## identity-sequence
+
+This folder has scripts for dealing with sequences and identity columns.
+
+The following snippets are available:
+
+| Name | Description | Shortcut |
+| ---- | ----------- | -------- |
+| Check Identity | Find out what the current identity value for the specified table is | checkidentity |
+| Reset Identity | Reseeds the specified identity counter | resetidentity |
+
