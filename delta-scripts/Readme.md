@@ -3,10 +3,11 @@
 This folder has scripts to simplify the creation of delta scripts for creating and updating databases.
 There are snippet files for the following editors
 
-* [Atom](https://atom.io/) 
+* [Atom](https://atom.io/)
 * [Notepad++](https://notepad-plus-plus.org/)
 * [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/mt238290.aspx). Note that snippets were not introduced into SSMS until the 2012 version (version 11.0)
 * [Visual Studio](https://www.visualstudio.com/)
+* [VSCode](https://code.visualstudio.com/)
 
 The following snippets are available:
 
